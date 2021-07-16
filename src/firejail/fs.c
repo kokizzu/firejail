@@ -162,6 +162,19 @@ static void disable_file(OPERATION op, const char *filename) {
 				fs_logger2("blacklist", fname);
 			else
 				fs_logger2("blacklist-nolog", fname);
+
+			// files in /etc will be reprocessed during /etc rebuild
+			if (strncmp(fname, "/etc/", 5) == 0) {
+				ProfileEntry *prf = malloc(sizeof(ProfileEntry));
+				if (!prf)
+					errExit("malloc");
+				memset(prf, 0, sizeof(ProfileEntry));
+				prf->data = strdup(fname);
+				if (!prf->data)
+					errExit("strdup");
+				prf->next = cfg.profile_rebuild_etc;
+				cfg.profile_rebuild_etc = prf;
+			}
 		}
 	}
 	else if (op == MOUNT_READONLY || op == MOUNT_RDWR || op == MOUNT_NOEXEC) {
@@ -489,7 +502,7 @@ void fs_tmpfs(const char *dir, unsigned check_owner) {
 	struct statvfs buf;
 	if (fstatvfs(fd, &buf) == -1)
 		errExit("fstatvfs");
-	unsigned long flags = buf.f_flag & ~(MS_RDONLY|MS_BIND);
+	unsigned long flags = buf.f_flag & ~(MS_RDONLY|MS_BIND|MS_REMOUNT);
 	// mount via the symbolic link in /proc/self/fd
 	EUID_ROOT();
 	char *proc;
