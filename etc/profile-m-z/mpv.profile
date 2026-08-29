@@ -92,7 +92,8 @@ private-bin env,mpv,python*,waf,youtube-dl,yt-dlp
 #private-cache
 private-dev
 
-dbus-user none
+dbus-user filter
+dbus-user.own org.mpris.MediaPlayer2.mpv
 dbus-system none
 
 restrict-namespaces
