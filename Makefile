@@ -430,7 +430,7 @@ TESTS = \
 	seccomp-extra \
 	utils
 
-TEST_TARGETS=$(patsubst %,test-%,$(TESTS))
+TEST_TARGETS = $(patsubst %,test-%,$(TESTS))
 
 .PHONY: $(TEST_TARGETS)
 $(TEST_TARGETS):
