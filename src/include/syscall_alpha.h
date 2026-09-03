@@ -497,3 +497,4 @@
 { "file_setattr", 579 },
 { "listns", 580 },
 { "rseq_slice_yield", 581 },
+{ "fchroot", 582 },
