@@ -28,10 +28,10 @@ sudo ls
 for app in "${apps[@]}"; do
 	if command -v "$app"
 	then
-		echo "TESTING: $app"
+		echo "TESTING: $app (test/apps/$app.exp)"
 		./"$app".exp
 	else
-		echo "TESTING SKIP: $app not found"
+		echo "TESTING SKIP: $app not found (test/apps/$app.exp)"
 	fi
 done
 rm -f index.html
