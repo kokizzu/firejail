@@ -17,7 +17,10 @@ testapp() {
 
 	sudo true
 	echo "TESTING: $app (test/apps/$app.exp)"
-	./"$app".exp
+
+	./"$app".exp ||
+	echo "TESTING ERROR: test/apps/$app.exp: $?"
+
 	sleep 1
 }
 
@@ -29,7 +32,9 @@ for app in "${apps[@]}"; do
 	if command -v "$app"
 	then
 		echo "TESTING: $app (test/apps/$app.exp)"
-		./"$app".exp
+
+		./"$app".exp ||
+		echo "TESTING ERROR: test/apps/$app.exp: $?"
 	else
 		echo "TESTING SKIP: $app not found (test/apps/$app.exp)"
 	fi
