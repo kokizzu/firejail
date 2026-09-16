@@ -33,7 +33,7 @@ for app in "${apps[@]}"; do
 	if command -v "$app"
 	then
 		echo "TESTING: private-lib $app"
-		./$app.exp
+		./"$app".exp
 	else
 		echo "TESTING SKIP: $app not found"
 	fi
