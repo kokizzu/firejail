@@ -169,6 +169,7 @@ Amin Vakil (https://github.com/aminvakil)
 	- new profile: pi (#7136)
 	- profiles: add llm-agent-common.profile (#7158)
 	- new profile: claude (#7169)
+	- profiles: llm-agent-common: disable private-cache (#7212)
 Ammon Smith (https://github.com/ammongit)
 	- Add DBus filter rules specific to firefox-developer-edition
 Andreas Hunkeler (https://github.com/Karneades)
@@ -257,6 +258,8 @@ bbhtt (https://github.com/bbhtt)
 	- fixes to cheese, authenticator, liferea
 	- add profile for straw-viewer
 	- email clients whitelisting and fixes
+Ben Younes (https://github.com/ousamabenyounes)
+	- bugfix: fbwrap: wait for target and propagate exit code (#7081 #7224)
 Benjamin Kampmann (https://github.com/ligthyear)
 	- Forward exit code from child process
 BeautyYuYanli (https://github.com/BeautyYuYanli)
