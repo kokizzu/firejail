@@ -751,7 +751,7 @@ Jose Riha (https://github.com/jose1711)
 	- fix udiskie.profile
 	- improve hints for allowing browser access to Gnome extensions connector
 	- fix warshow, jumpnbump, tremulous, blobwars profile fixes
-	- drop noinput for games with gampad/joystick support
+	- drop noinput for games with gamepad/joystick support
 	- goldendict profile fix
 	- whitelist /usr/share/nextcloud to allow access to translation files
 	- fix clipgrab profile
