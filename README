@@ -260,6 +260,7 @@ bbhtt (https://github.com/bbhtt)
 	- email clients whitelisting and fixes
 Ben Younes (https://github.com/ousamabenyounes)
 	- bugfix: fbwrap: wait for target and propagate exit code (#7081 #7224)
+	- bugfix: mountinfo: handle lines longer than 4096 bytes (#6450 #7225)
 Benjamin Kampmann (https://github.com/ligthyear)
 	- Forward exit code from child process
 BeautyYuYanli (https://github.com/BeautyYuYanli)
@@ -875,6 +876,9 @@ mammo0 (https://github.com/mammo0)
 	- remove 'text/plain' from firejail-profile.lang.in
 Manuel Dipolt (https://github.com/xeniter)
 	- stack alignment for the ARM Architecture
+Markus Probst (https://github.com/0xIO32)
+	- profiles: librewolf: add new ~/.config/librewolf dir (#7233)
+	- profiles: keepassxc: add ~/.local/state/keepassxc (#7235)
 Marek Küthe (https://github.com/marek22k)
 	- allow loading plugins in gajim
 	- allow bsfilter in email-common.profile
@@ -1383,6 +1387,8 @@ tinmanx (https://github.com/tinmanx)
 	- remove network access from cherrytree.profile
 t-m-w (https://github.com/t-m-w)
 	- profiles: mullvad-browser: allow readlink and realpath (#6923)
+Tom Hense (https://github.com/tomhense)
+	- profiles: mpv: allow dbus mpris (#7134 #7237)
 Tom Mellor (https://github.com/kalegrill)
 	- mupen64plus profile
 Tomasz Jan Góralczyk (https://github.com/tjg)
